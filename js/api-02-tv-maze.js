@@ -74,8 +74,9 @@ const answerElement_tvmaze_4 = document.getElementById('tvmaze-4')
 
 request.get('http://api.tvmaze.com/shows/431/seasons')
 .then(function (seasons){
+  console.log(seasons)
   var dates = seasons.body
-  var premiere = dates[0].premiereDate
+  var premiere = dates[8].premiereDate
 
   answerElement_tvmaze_3.innerHTML = premiere
 })
